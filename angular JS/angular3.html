@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- working...success... -->
+	<title>angular js</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+</head>
+<body>
+<p>PLEASE ENTER YOUR NAME....</p>
+<div ng-app="myApp" ng-controller="myCtrl">
+	First Name:<input type="text" ng-model="fname"><br>
+	Last Name:<input type="text" ng-model="lname">
+	<br>
+	<h2>WELCOME {{fname+" "+lname}}</h2>
+</div>
+<script >
+	var app=angular.module('myApp',[]);
+	app.controller('myCtrl',function($scope){
+		$scope.fname="";
+		$scope.lname="";
+	});
+</script>
+</body>
+</html>

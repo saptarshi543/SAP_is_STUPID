@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- working..success -->
+	<meta charset="utf-8">
+<title>angular js</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+	<style >
+		h2{
+			background-color: lightgray;
+			padding: 2%;
+		}
+	</style>
+</head>
+<body>
+<div ng-app="myApp" ng-controller="myCtrl">
+	<h2 ng-mousemove="sap($event)">mouse over me</h2>
+	<h3>coordinates are: {{ x+' , '+ y}} </h3>
+</div>
+<script >
+	var app=angular.module('myApp',[]);
+	app.controller('myCtrl',function($scope){
+		$scope.sap=function(my_event){
+			$scope.x=my_event.clientX;
+			$scope.y=my_event.clientY;
+		}
+	});
+</script>
+</body>
+</html>

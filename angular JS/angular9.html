@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- working...success... -->
+	<meta charset="utf-8">
+	<title>angular js</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+</head>
+<body>
+<div ng-app="sap" ng-controller="ct">
+	<p>enter a decimal number...<input type="number" ng-model="user"></p>
+	<button ng-click="sap()">find:</button>
+	<p> hexadecimal form:{{ x }}</p>
+</div>
+<script >
+	var app=angular.module('sap',[]);
+	app.controller('ct',function($scope){
+		// $scope.x=0;
+		$scope.sap=function(user){
+			// console.log(">>");
+			var ans="",copy=parseInt($scope.user);
+			while(true){
+				ans+=String(copy%16);
+				if((copy<=0)||(copy<16)){break;}
+				copy=Math.floor(copy/16);
+			}
+			var ans2=[...ans].reverse().join("");
+			$scope.x=ans2;
+		}
+	});
+</script>
+</body>
+</html>

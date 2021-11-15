@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- working..success... -->
+	<meta charset="utf-8">
+	<title>angular js</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+</head>
+<body>
+<div ng-app="shoppingList" ng-controller="myCtrl">
+	<h2>add items</h2>
+	<ul>
+		<li ng-repeat="x in products">{{x}}<span ng-click="removeItem($index)">  ...X</span></li>
+	</ul>
+	<input ng-model="addMe" >
+	<button ng-click="addItem()"> ADD </button>
+	<p>{{error}}</p>
+</div>
+<script >
+	var app=angular.module("shoppingList",[]);
+	app.controller('myCtrl',function($scope){
+		$scope.products=[];
+		$scope.addItem=function(){
+			$scope.error="";
+			if(!$scope.addMe){return;}
+			if($scope.products.indexOf($scope.addMe)==-1){
+				$scope.products.push($scope.addMe);
+			}else{
+				$scope.error="!!! This item already exists !!!";
+			}
+			$scope.removeItem=function(x){
+				$scope.error="";
+				$scope.products.splice(x,1);
+			}
+		}
+	});
+</script>
+</body>
+</html>
