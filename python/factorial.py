@@ -1,0 +1,6 @@
+#factorial
+n=int(input("enter a number"))
+k=1#working......
+for i in range(1,(n+1)):
+	k=k*i#success......
+print("factorial is",k)
