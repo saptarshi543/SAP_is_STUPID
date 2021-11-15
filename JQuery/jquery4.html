@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- working...success....
+	alerts the user when the user's mouse enters a certain area which in this case is a p tag with id="p1" 
+again gives an alert when the user's mouse leaves the area..-->
+	<title>jquery</title>
+	<style type="text/css">
+		p{
+			text-align: bottom;
+		}
+	</style>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script >
+		$(document).ready(function(){
+			$("#p1").mouseenter(function(){
+				alert("you entered p1!...");
+			});
+		});
+	</script>
+	<script >
+		$(document).ready(function(){
+			$("#p1").mouseleave(function(){
+				alert("you left p1!...");
+			});
+		});
+	</script>
+</head>
+<body>
+<h2>mouse events...</h2>
+<p id="p1">enter this para...</p>
+</body>
+</html>

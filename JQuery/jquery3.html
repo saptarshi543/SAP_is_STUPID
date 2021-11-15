@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- working....success...
+	makes p tags disappear when double clicked on it -->
+	<title>jquery</title>
+	<style type="text/css">
+		p{
+			text-align: center;
+		}
+	</style>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script >
+		$(document).ready(function(){
+			$("p").dblclick(function(){
+				$(this).hide();
+			});
+		});
+	</script>
+</head>
+<body>
+<h2>learning DOUBLE CLICK..</h2>
+<p>click me...</p>
+</body>
+</html>

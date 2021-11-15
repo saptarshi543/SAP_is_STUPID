@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- working...success...
+	alerts when a user right or left clicks a certain tag... -->
+	<title>jquery..</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<style type="text/css">
+		p{
+			text-align: center;
+		}
+	</style>
+	<script >
+		$(document).ready(function(){
+			$("#p1").mousedown(function(){
+				alert("you pressed me...");
+			});
+		});
+	</script>
+</head>
+<body>
+<h2>mouse events ....click</h2>
+<p id="p1">RIGHT or LEFT click me</p>
+</body>
+</html>

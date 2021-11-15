@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- working...success.. -->
+	<title>jquery</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<style type="text/css">
+		#panel,#flip{
+			padding:5px;
+			text-align: center;
+			background-color: green;
+			border: solid 1px purple;
+		}
+		#panel{
+			padding: 50px;
+			display: none;
+		}
+	</style>
+	<script >
+		$(document).ready(function(){
+			$("#flip").click(function(){
+				$("#panel").slideToggle("slow");
+			});
+		});
+	</script>
+</head>
+<body>
+<h2>learning sliding up / down</h2>
+<div id="flip">click me</div>
+<div id="panel">hello there</div>
+</body>
+</html>

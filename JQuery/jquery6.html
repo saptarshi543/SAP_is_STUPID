@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- working...success..
+	alerts the user when user's mouse hovers over an tag -->
+	<title>jquery</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<style type="text/css">
+		p{
+			text-align: center;
+		}
+	</style>
+	<script >
+		$(document).ready(function(){
+			$("#p1").hover(function(){
+				alert("you hovered over me...");
+			});
+		});
+	</script>
+</head>
+<body>
+<h2>hover in jquery</h2>
+<p id="p1">BRING YOUR MOUSE ON ME!!</p>
+</body>
+</html>

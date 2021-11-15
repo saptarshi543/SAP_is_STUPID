@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- working....success...
+	makes the text beautiful and more... -->
+	<title>jquery</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script >
+		$(document).ready(function(){
+			$("#b1").click(function(){
+				$("h1,p").addClass("important");
+			});
+			$("#b2").click(function(){
+				$("h1,p").addClass("imp_s");
+			});
+		});
+	</script>
+	<style type="text/css">
+		.important{
+			font-weight: bold;
+			font-size: xx-large;
+			color: blue;
+		}
+		.imp_s{
+			border: 2px solid green;
+			margin-top: 100px;
+			margin-bottom: 100px;
+			margin-left: 80px;
+			margin-right: 150px;
+            border:2px solid red;
+			border-radius: 8px;
+            border-left: 6px solid blue;
+			background-color: lightgray;
+		}
+	</style>
+</head>
+<body>
+<h2>add classes in jquery</h2>
+<h1>text 1</h1>
+<p>text 2</p>
+<p>text 3</p>
+<button id="b1">Make them important..</button>
+<button id="b2">Make them more stylish..</button>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- working but does not wait for n no. of seconds... -->
+	<title>jquery</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script >
+		$(document).ready(function(){
+			$("button").click(function(){
+			var n=document.getElementById("usernum").text;
+			var str=String(document.getElementById("user").value);
+			setTimeout(function(){
+			document.querySelector("#a1").innerText=str;
+			},(n*1000));
+			});
+		});
+	</script>
+</head>
+<body>
+<h2 id="a1">HELLO WORLD</h2>
+what do you want to see next? <input type="text" id="user">
+after how many seconds do you want to change? <input type="number" id="usernum">
+<button>change</button>
+</body>
+</html>

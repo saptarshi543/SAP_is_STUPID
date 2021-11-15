@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- working...success....
+	takes an input then changes background accordingly..-->
+	<title>jquery</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script >
+		$(document).ready(function(){
+			$("button").click(function(){
+				$("body").css({"backgroundColor":$("#user").val()});
+			});
+		});
+	</script>
+</head>
+<body>
+<h2>what color do you like??</h2>
+<input type="text" id="user">
+<button>CHANGE</button>
+</body>
+</html>

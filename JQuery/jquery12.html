@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- working....success... -->
+	<title>jquery</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script >
+	$(document).ready(function(){
+		$("button").click(function(){
+			var div=$("div");
+			div.animate({left:'100px'},"slow");
+			div.animate({fontSize:'3em'},"slow");
+		});
+	});
+</script>
+</head>
+<body>
+<h2>animations with jquery...</h2>
+<button>START ANIMATION</button>
+<div style="background:#98bf21;height:100px;width:200px;position:absolute;">SAP</div>
+</body>
+</html>

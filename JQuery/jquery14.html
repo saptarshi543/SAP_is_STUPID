@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- working...success.. -->
+	<title>jquery</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script >
+		$(document).ready(function(){
+			$("button").click(function(){
+				$("#div").remove();
+			});
+		});
+	</script>
+</head>
+<body>
+	<h2>Removing elements in jquery</h2>
+	<br>
+	<div id="div">
+		<p>hello there....i will be removed..</p>
+	</div>
+<button>REMOVE DIV</button>
+</body>
+</html>

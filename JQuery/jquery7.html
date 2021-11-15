@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- working...success.....
+	2 buttons>hide me and show me....
+	when pressed on either hides or shows the p tag -->
+	<title>jquery</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<style type="text/css">
+		p{
+			text-align: center;
+		}
+	</style>
+	<script >
+		$(document).ready(function(){
+			$("#hide").click(function(){
+				$("p").hide(1000);
+			});
+			$("#show").click(function(){
+				$("p").show(1000);
+			});
+		});
+	</script>
+</head>
+<body>
+<h2>learning hide show</h2>
+<p>u can make me disappear or reappear...</p>
+<button id="hide">HIDE ME</button>
+<button id="show">SHOW ME</button>
+</body>
+</html>
