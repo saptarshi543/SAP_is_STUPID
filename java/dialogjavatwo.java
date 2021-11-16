@@ -1,0 +1,6 @@
+import javax.swing.JOptionPane;
+public class dialogjavatwo{//working.........
+	public static void main(String f[]){//success........
+		JOptionPane.showMessageDialog(null,"1st time displaying something in java","Title",0);
+	}
+}
