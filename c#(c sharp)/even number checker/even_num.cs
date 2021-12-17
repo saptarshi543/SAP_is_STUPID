@@ -1,12 +1,8 @@
 using System;
-
-namespace even_num
-{
-    class Program
-    {
-        static void Main(string[] args)
-        {
-            // working...success..
+namespace even_num{
+    class Program{
+        static void Main(string[] args){
+            // working...
             int user;
             String tmp;
             Console.WriteLine("today we will check if a number is even or not..\n enter a number");
