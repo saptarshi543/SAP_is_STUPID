@@ -1,7 +1,17 @@
 import java.util.*;
 public class morse{
-    public static String morse_to_normal(String n){
+    public static String morse_to_normal(String n,String [] morse ,char [] characters){
         String final_ans="";
+        int len=n.length();
+        int count;
+        String words[]=n.split("       ");//7 spaces means a new word is starting..
+        for(int itr=0;itr<(words.length());itr++){
+            String tmp_word=words[itr];
+            for(int tmp=0;tmp<(morse.length());tmp++){
+                if(tmp_word==morse[tmp]){count=tmp;break;}
+            }
+            final_ans+=(characters[count]+" ");
+        }
         return final_ans;
     }
     public static String normal_to_morse(String n2,String [] morse,char [] characters){
@@ -70,9 +80,9 @@ public class morse{
             System.out.println(normal_to_morse(tmp_user,morse,characters));
             }
             else if(tmp==2){System.out.println("enter morse code with proper spacing"); String tmp_user_morse=nrt.nextLine();
-            System.out.println(morse_to_normal(tmp_user_morse));}
+            System.out.println(morse_to_normal(tmp_user_morse,morse,characters));}
             else if(tmp==3){System.exit(0);}
         }
-    nrt.close();
+    // nrt.close();
     }
 }
