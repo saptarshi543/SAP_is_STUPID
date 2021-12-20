@@ -9,6 +9,7 @@ namespace arrays1
             Console.WriteLine("enter number of elements...");
             int len=Convert.ToInt32(Console.ReadLine());
             int[] user=new int[len];
+            Console.WriteLine("enter the elements");
             for(int i=0;i<len;i++){
                 user[i]=Convert.ToInt32(Console.ReadLine());
             }
