@@ -67,7 +67,7 @@ public class morse{
          */
                 
         /*
-        //just fo testing...uncomment to see it....
+        //just for testing...uncomment to see it....
         for(int i=0;i<(36);i++){
             System.out.println(characters[i]+"  >>  "+morse[i]);
         }*/
