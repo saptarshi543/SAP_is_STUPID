@@ -1,21 +1,24 @@
 import java.util.*;
 
 public class morse2 {
-
-    static char characters[] = { 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q',
-            'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0' };
+    static String characters[] = { "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q",
+            "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0" };
     static String morse[] = { ". _", "_ . . .", "_ . _ .", "_ . .", ".", ". . _ .", "_ _ .", ". . . .", ". .",
             ". _ _ _", "_ . _", ". _ _ _", "_ _", "_ .", "_ _ _", ". _ _ .", "_ _ . _", ". _ .", ". . .", "_", ". . _",
             ". . . _", ". __", "_ . . _", "_ . _ _", "_ _ . .", ". _ _ _ _", ". ._ _ _", ". . . _ _", ". . . . _",
             ". . . . .", "_ . . . .", "_ _ . . .", "_ _ _ . .", "_ _ _ _ .", "_ _ _ _ _" };
     static String space_between_words = "       ";// 7 blank units
-    static String space_between_letters = " "; // 3 blank units
+    static String space_between_letters = "   "; // 3 blank units
 
-    public static String morse_to_normal(String n) {
+    public static String remove_space_in_front(String n) {
+        return n.substring(1);
+    }
+
+    public static String morse_to_normal(String n1) {
+        String n = remove_space_in_front(n1);
         String final_ans = "";
         int count = 0;
         String words[] = n.split(space_between_words);
-
         /*
          * //uncomment to see the program separate the words and letters
          * for (int i = 0; i < words.length; i++) {
@@ -28,15 +31,19 @@ public class morse2 {
          * }
          * }
          */
+
         for (int i = 0; i < words.length; i++) {
             String letters[] = words[i].split("   ");
-            for (String tmp : morse) {
-                String tmp_letter = letters[count];
-                if (tmp == tmp_letter) {
-                    // final_ans += characters[count];
-                    System.out.println(tmp + " >> " + characters[count]);
+
+            for (String tmp_letter : letters) {
+                for (String tmp : morse) {
+                    if (tmp == tmp_letter) {
+                        final_ans += characters[count];
+                        count++;
+                        break;
+                    }
+                    count++;
                 }
-                count++;
             }
             final_ans += " ";
         }
@@ -49,6 +56,7 @@ public class morse2 {
     }
 
     public static void main(String d[]) {
+        // driver code
         Scanner nrt = new Scanner(System.in);
         while (true) {
             System.out.println(
