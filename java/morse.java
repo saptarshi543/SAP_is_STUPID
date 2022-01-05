@@ -43,8 +43,9 @@ public class morse2 {
                         count++;
                         break;
                     }
-                    count++;
+                    
                 }
+                count++;
             }
             final_ans += " ";
         }
