@@ -38,6 +38,7 @@ public class morse2 {
             for (String tmp_letter : letters) {
                 for (String tmp : morse) {
                     if (tmp == tmp_letter) {
+                        System.out.println("inside if");//test 
                         final_ans += characters[count];
                         count++;
                         break;
