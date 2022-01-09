@@ -1,2 +1,6 @@
 # SAP_is_STUPID
 ## hi! I am saptarshi chattopadhyay...i am a beginner so it will be of great help if you could assist me in anyway thanks in advance... this repository contains all the projects i have and have been working on till now...
+
+ let's try out some new language or framework...
+i mean there's no harm in learning by the way what could go wrong??
+well i am a failure and already doomed
