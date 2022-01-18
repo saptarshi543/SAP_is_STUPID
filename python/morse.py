@@ -1,4 +1,6 @@
 
+
+
 def morse_to_normal(user_str,database,s_b_w,s_b_l):
     # working....
     final_ans=""
@@ -9,12 +11,26 @@ def morse_to_normal(user_str,database,s_b_w,s_b_l):
             final_ans+=str(database[letters])
         final_ans+=str(" ")
     
+
+    # test code
+    # for tmp_word in split_string_into_words:
+    #     print("word>>",tmp_word)
+    #     # words are separated fine...
+    #     split_letters=tmp_word.split("   ")
+    #     for tmp_letter in split_letters:
+    #         print("letter> ",tmp_letter)
     return final_ans
 def normal_to_morse(user_str,database):
-    # working...
+    # working..
     final_ans=""
-    for tmp_letter in user_str:
-        final_ans+=str(database[tmp_letter])+str("   ")
+    for letter in user_str:
+        try:
+            if letter==str(" "):
+                final_ans+=str("    ")
+            else:
+                final_ans+=str(database[letter])+str("   ")
+        except KeyError:
+            print(final_ans)
     return final_ans
 # driver code
 print("1: morse to normal\n2: normal to morse\n3: exit\n in the next line eneter your message")
@@ -24,7 +40,6 @@ space_between_words="       " #7 units
 space_between_letters="   "#3 units
 dataBase2={
     # keyname : value
-    " ":"       ",
     "A":". _",
     "B":"_ . . .",
     "C":"_ . _ .",
