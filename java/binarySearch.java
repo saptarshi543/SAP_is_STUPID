@@ -29,6 +29,6 @@ public class binarySearch{
         System.out.println("enter your element to search");
         int target=nrt.nextInt();
         int result_index=binary_search(target,user);
-        System.out.println("index: "+(result_index-1)+"\n !! if result is negative that implies element is not found in the array !!");
+        System.out.println("index: "+(result_index+1)+"\n !! if result is negative that implies element is not found in the array !!");
     }
 }
