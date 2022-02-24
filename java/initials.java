@@ -1,4 +1,7 @@
 /*
+input: jacK doRseY 
+output: DORSEY J. 
+
 input: Abcd Efr Xy
 output: Xy A.E.
 
