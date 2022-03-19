@@ -16,8 +16,13 @@
  
  https://project2sap.000webhostapp.com/
 
-# these are another two i did with React js
+# these are others i did with React js
+
+star wars memes 
  https://dreamy-johnson-fc66a6.netlify.app/
+
+a site where you can search for an image and the
+site will display all possible results 
  https://sapimagesearch.netlify.app/
 
 juicy memes
