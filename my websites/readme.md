@@ -7,9 +7,7 @@
  https://stupid.w3spaces.com/
  https://saptarshi.w3spaces.com/
 
-# this two are from 000webhost.com
 
- https://project1sap.000webhostapp.com/
 
 
 ### So far this one is the most advanced and responsive website i created
