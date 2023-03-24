@@ -10,9 +10,8 @@
 
 
 
-### So far this one is the most advanced and responsive website i created
+### So far this one is the most responsive website i created
  
- https://project2sap.000webhostapp.com/
 
 # these are others i did with React js
 
