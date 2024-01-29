@@ -1,6 +1,6 @@
 import java.util.*;
 /*working...success..*/
-class queue{
+public class queue{
 	int items[];
 	int front,rear,size;
 	queue(int se){
@@ -16,7 +16,7 @@ boolean isEmpty(){if(front==-1){return true;}
 else{return false;}}
 
 		void enqueue(int x){
-			if(isFull()){System.out.println("queue is full...exiting");System.exit(1);}
+			if(isFull()){System.out.println("queue is full...exiting");}
 			else{
 				if(front==-1){front=0;}
 				rear++;
@@ -35,7 +35,7 @@ else{return false;}}
 			if(isEmpty()){System.out.println("empty queue");}else{
 				System.out.println("\n front index..."+front);
 				System.out.println("items");
-				for(int i=0;i<=rear;i++){System.out.print(items[i]+" ");}
+				for(int i=front;i<=rear;i++){System.out.print(items[i]+" ");}
 					System.out.println("\nrear index..."+rear+"\n");}}
 				public static void main(String f[]){
 					System.out.println("enter capacity..");
